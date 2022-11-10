@@ -1,11 +1,19 @@
 {
   "name": "bfsocket.io",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "bfsocket.io is WebSocket client",
   "main": "./lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
-  "author": "YoneyY <yoneyy@163.com>",
+  "author": {
+    "name": "yoneyy",
+    "email": "yoneyy@163.com",
+    "url": "https://github.com/yoneyy"
+  },
+  "repository": "https://github.com/yoneyy/bfsocket.io",
+  "bugs": {
+    "url": "https://github.com/yoneyy/bfsocket.io/issues"
+  },
   "exports": {
     ".": {
       "import": "./lib/index.esm.js",
