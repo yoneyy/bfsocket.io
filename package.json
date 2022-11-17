@@ -1,6 +1,6 @@
 {
   "name": "bfsocket.io",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "bfsocket.io is WebSocket client",
   "main": "./lib/index.js",
   "module": "lib/index.esm.js",

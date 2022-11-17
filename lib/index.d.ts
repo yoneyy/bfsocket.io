@@ -66,10 +66,7 @@ export interface SocketIOInitData {
     reconnectlimit?: number;
 }
 declare class SocketIO {
-    private ws;
     private options;
-    readonly uniqueid: string | null;
-    session?: string | Array<any> | Record<string, any>;
     private reconnectcount;
     private remillisecond;
     private reconnectlimit;
@@ -78,6 +75,9 @@ declare class SocketIO {
     private timer;
     private heart;
     private events;
+    ws: WebSocket;
+    readonly uniqueid: string | null;
+    session?: string | Array<any> | Record<string, any>;
     constructor(options: SocketIOInitData);
     private overrides;
     /**
