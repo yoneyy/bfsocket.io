@@ -100,10 +100,7 @@ const SESSION_KEY = 'bws:session';
 
 class SocketIO {
 
-  private ws: WebSocket;
   private options: SocketIOInitData;
-  public readonly uniqueid: string | null; // socket uniqueid
-  public session?: string | Array<any> | Record<string, any>; // socket session
   private reconnectcount: number; // number of reconnections
   private remillisecond: number; // reconnection interval
   private reconnectlimit: number; // max limit for reconnection
@@ -112,6 +109,11 @@ class SocketIO {
   private timer: NodeJS.Timeout | number | null = null;
   private heart: SocketIOInitData['heart'] | null = null;
   private events: Record<string, (data: any) => void> = {};
+
+  public ws: WebSocket;
+  public readonly uniqueid: string | null; // socket uniqueid
+  public session?: string | Array<any> | Record<string, any>; // socket session
+
 
   constructor(options: SocketIOInitData) {
     this.options = options;
